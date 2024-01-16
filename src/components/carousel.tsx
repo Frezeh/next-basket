@@ -75,14 +75,6 @@ export default function Carousel({ data }: { data: Product }) {
               {data.images.map((d, i) => (
                 <div className="flex-shrink-0" key={i} ref={refs[i]}>
                   <div className="w-[348px] sm:w-[506px] sm:h-[450px] relative overflow-hidden">
-                    {/* <Image
-                      src={d}
-                      alt="Blog"
-                      width={506}
-                      height={0}
-                      className="object-contain h-auto"
-                      priority
-                    /> */}
                     <div className="relative inset-0 w-[348px] sm:w-[506px] h-[450px] object-cover">
                       <Image
                         src={d}

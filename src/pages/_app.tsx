@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <PersistGate loading={<span>Loading...</span>} persistor={persistor}>
           <Head>
             <title>Bandage</title>
-            <meta name="description" content="" />
+            <meta name="description" content="E-commerce app" />
             <meta
               name="viewport"
               content="initial-scale=1, width=device-width"

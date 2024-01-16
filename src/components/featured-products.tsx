@@ -66,35 +66,12 @@ export default function FeaturedProducts({
               href={`/${product.id}`}
               key={product.id}
             >
-              {/* <Image
-                src={product.thumbnail}
-                alt={product.title}
-                width={239}
-                height={280}
-                className="object-cover w-auto h-auto"
-              /> */}
-              {/* <div
-                style={{
-                  position: "relative",
-                  width: "239px",
-                  height: "280px",
-                }}
-              >
-                <Image
-                  src={product.thumbnail}
-                  alt={product.title}
-                  layout="fill"
-                  objectFit="fill"
-                  className="flex-shrink-0"
-                />
-              </div> */}
               <div className="relative inset-0 w-[239px] h-[238px] object-cover">
                 <Image
                   src={product.thumbnail}
                   alt={product.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  // className="object-contain"
                   priority
                 />
               </div>

@@ -1,11 +1,18 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Cart from "./cart";
 import WishList from "./wish-list";
-import Image from "next/image";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const [state, setState] = useState<"active" | "">("");
+  const [height, setHeight] = useState("0px");
+
+  const content = useRef<null | HTMLDivElement>(null);
+
+  function toggleNavbar() {
+    setState(state === "" ? "active" : "");
+    setHeight(state === "active" ? "0px" : `${content?.current!.scrollHeight}px`);
+  }
 
   return (
     <header className="sticky top-0 z-50">
@@ -169,7 +176,7 @@ export default function Header() {
       </div>
 
       {/*** NavBar ***/}
-      <div className={`bg-white ${open && "h-[700px] animate-slide-down"}`}>
+      <div className={`bg-white`}>
         <div className="px-7 sm:px-[38px] py-[17px] flex items-center justify-between">
           <div className="flex items-center gap-10">
             <Link href="/" className="xl:pr-[79px]">
@@ -291,8 +298,11 @@ export default function Header() {
 
           {/*** Mobile ***/}
           <div className="block lg:hidden">
-            {open ? (
-              <button onClick={() => setOpen(false)}>
+            <button
+              className="transition-[background-color] bg-white duration-[0.6s] ease-[ease]"
+              onClick={toggleNavbar}
+            >
+              {state === "active" ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -305,9 +315,7 @@ export default function Header() {
                     fill="black"
                   />
                 </svg>
-              </button>
-            ) : (
-              <button onClick={() => setOpen(true)}>
+              ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -320,13 +328,17 @@ export default function Header() {
                     fill="#252B42"
                   />
                 </svg>
-              </button>
-            )}
+              )}
+            </button>
           </div>
         </div>
 
-        {open && (
-          <div className="animate-slide-down bg-white w-full h-[290px] rounded-b-[24px] lg:hidden flex flex-col justify-center items-center gap-6 absolute top-[30%] mt-8">
+        <div
+          ref={content}
+          style={{ maxHeight: `${height}` }}
+          className="overflow-auto transition-[max-height] duration-[0.6s] ease-[ease]"
+        >
+          <div className="bg-white w-full rounded-b-[24px] lg:hidden flex flex-col justify-center items-center gap-6 mt-8">
             <Link
               href="/"
               className="text-secondTextColor text-3xl transition-all hover:text-textColor"
@@ -434,7 +446,7 @@ export default function Header() {
               <WishList />
             </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
