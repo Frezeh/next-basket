@@ -37,7 +37,7 @@ export default function Home() {
 
       {/*** Call to Action ***/}
       <section className="relative w-full h-[712px] sm:h-[640px] bg-[url('/assets/images/footer-bg.png')] bg-cover bg-no-repeat">
-        <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-w-[571px] w-full">
+        <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-w-[571px] w-full px-10 sm:px-0">
           <div className="space-y-[30px] text-center">
             <p className="text-sm text-primaryColor font-bold">
               Designing Better Experience

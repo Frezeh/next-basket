@@ -1,18 +1,25 @@
+import Image from "next/image";
 import React from "react";
 
 export default function FeaturedPost() {
   return (
     <section className="flex flex-col justify-center items-center py-[112px] overflow-hidden">
       <div className="space-y-[10px]">
-        <p className="text-sm text-primaryColor text-center font-bold">Practice Advice</p>
-        <p className="text-[40px] font-bold text-center">
-          Featured Posts
+        <p className="text-sm text-primaryColor text-center font-bold">
+          Practice Advice
         </p>
+        <p className="text-[40px] font-bold text-center">Featured Posts</p>
       </div>
 
       <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-[10px] pt-20">
         <div className="max-w-[348px] bg-lightTextColor shadow-[0px_2px_4px_0px_rgba(0,0,0,0.10)]">
-          <div className="relative bg-[url('/assets/images/featured-post-1.png')] w-[348px] h-[300px] sm:w-[451px] object-cover bg-no-repeat flex-shrink-0">
+          <div className="relative flex-shrink-0 w-[348px] max-w-[348px] h-[300px] sm:w-[451px] object-cover bg-no-repeat">
+            <Image
+              src="/assets/images/featured-post-1.png"
+              alt="item"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
             <div className="absolute inline-flex items-center px-[10px] my-5 mx-[30px] bg-dangerColor rounded-[3px] shadow-[0px_2px_4px_0px_rgba(0, 0, 0, 0.10)]">
               <p className="text-lightTextColor text-center text-sm font-bold">
                 NEW
@@ -31,8 +38,8 @@ export default function FeaturedPost() {
             </div>
             <p className="text-xl">Loudest à la Madison #1 (L&apos;integral)</p>
             <p className="text-sm text-secondTextColor">
-              We focus on ergonomics and meeting you where you work. It&apos;s only a
-              keystroke away.
+              We focus on ergonomics and meeting you where you work. It&apos;s
+              only a keystroke away.
             </p>
             <div className="flex justify-between py-[15px]">
               <div className="flex items-center gap-[5px]">
@@ -112,7 +119,13 @@ export default function FeaturedPost() {
           </div>
         </div>
         <div className="max-w-[348px] bg-lightTextColor shadow-[0px_2px_4px_0px_rgba(0,0,0,0.10)]">
-          <div className="relative bg-[url('/assets/images/featured-post-2.png')] w-[348px] h-[300px] sm:w-[451px] object-cover bg-no-repeat flex-shrink-0">
+          <div className="relative flex-shrink-0 w-[348px] max-w-[348px] h-[300px] sm:w-[451px] object-cover bg-no-repeat">
+            <Image
+              src="/assets/images/featured-post-2.png"
+              alt="item"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
             <div className="absolute inline-flex items-center px-[10px] my-5 mx-[30px] bg-dangerColor rounded-[3px] shadow-[0px_2px_4px_0px_rgba(0, 0, 0, 0.10)]">
               <p className="text-lightTextColor text-center text-sm font-bold">
                 NEW
@@ -131,8 +144,8 @@ export default function FeaturedPost() {
             </div>
             <p className="text-xl">Loudest à la Madison #1 (L&apos;integral)</p>
             <p className="text-sm text-secondTextColor">
-              We focus on ergonomics and meeting you where you work. It&apos;s only a
-              keystroke away.
+              We focus on ergonomics and meeting you where you work. It&apos;s
+              only a keystroke away.
             </p>
             <div className="flex justify-between py-[15px]">
               <div className="flex items-center gap-[5px]">
@@ -212,7 +225,13 @@ export default function FeaturedPost() {
           </div>
         </div>
         <div className="max-w-[348px] bg-lightTextColor shadow-[0px_2px_4px_0px_rgba(0,0,0,0.10)]">
-          <div className="relative bg-[url('/assets/images/featured-post-3.png')] w-[348px] h-[300px] sm:w-[451px] object-cover bg-no-repeat flex-shrink-0">
+        <div className="relative flex-shrink-0 w-[348px] max-w-[348px] h-[300px] sm:w-[451px] object-cover bg-no-repeat">
+            <Image
+              src="/assets/images/featured-post-3.png"
+              alt="item"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
             <div className="absolute inline-flex items-center px-[10px] my-5 mx-[30px] bg-dangerColor rounded-[3px] shadow-[0px_2px_4px_0px_rgba(0, 0, 0, 0.10)]">
               <p className="text-lightTextColor text-center text-sm font-bold">
                 NEW
@@ -231,8 +250,8 @@ export default function FeaturedPost() {
             </div>
             <p className="text-xl">Loudest à la Madison #1 (L&apos;integral)</p>
             <p className="text-sm text-secondTextColor">
-              We focus on ergonomics and meeting you where you work. It&apos;s only a
-              keystroke away.
+              We focus on ergonomics and meeting you where you work. It&apos;s
+              only a keystroke away.
             </p>
             <div className="flex justify-between py-[15px]">
               <div className="flex items-center gap-[5px]">
