@@ -29,6 +29,9 @@ export default function Cart({ iconSize }: { iconSize?: "sm" | "lg" }) {
   return (
     <>
       <button
+        aria-label="cart"
+        aria-labelledby="cart"
+        role="button"
         className="p-[15px] flex gap-[5px] items-center transition-all hover:scale-[1.1] duration-[250ms] ease-out"
         onClick={toggleDrawer(true)}
       >
@@ -56,7 +59,9 @@ export default function Cart({ iconSize }: { iconSize?: "sm" | "lg" }) {
             </clipPath>
           </defs>
         </svg>
-        <p className="text-xs text-primaryColor">{cartTotal(cart).totalQuantity}</p>
+        <p className="text-xs text-primaryColor">
+          {cartTotal(cart).totalQuantity}
+        </p>
       </button>
 
       <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>

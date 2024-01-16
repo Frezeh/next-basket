@@ -19,6 +19,9 @@ export default function WishList({ iconSize }: { iconSize?: "sm" | "lg" }) {
   return (
     <>
       <button
+        aria-label="wishlist"
+        aria-labelledby="wishlist"
+        role="button"
         className="p-[15px] flex gap-[5px] items-center transition-all hover:scale-[1.1] duration-[250ms] ease-out"
         onClick={toggleDrawer(true)}
       >
@@ -54,8 +57,8 @@ export default function WishList({ iconSize }: { iconSize?: "sm" | "lg" }) {
           className={`flex flex-col gap-8 fixed w-[325px] max-h-[800px] rounded-lg overflow-y-scroll overflow-x-hidden px-4 py-8 right-[10%] top-[70px] bg-white ${montserrat.className}`}
         >
           <p className="text-base">
-            <strong className="text-2xl">Wishlist</strong>,{" "}
-            {wishlist.length} items
+            <strong className="text-2xl">Wishlist</strong>, {wishlist.length}{" "}
+            items
           </p>
 
           <div className="flex flex-col gap-[30px]">

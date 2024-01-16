@@ -11,7 +11,9 @@ export default function Header() {
 
   function toggleNavbar() {
     setState(state === "" ? "active" : "");
-    setHeight(state === "active" ? "0px" : `${content?.current!.scrollHeight}px`);
+    setHeight(
+      state === "active" ? "0px" : `${content?.current!.scrollHeight}px`
+    );
   }
 
   return (
@@ -80,7 +82,12 @@ export default function Header() {
         </p>
         <div className="flex gap-[10px] items-center">
           <p className="text-sm font-bold text-white">Follow Us :</p>
-          <button className="transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+          <button
+            aria-label="instagram"
+            aria-labelledby="instagram"
+            role="button"
+            className="transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -94,7 +101,12 @@ export default function Header() {
               />
             </svg>
           </button>
-          <button className="transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+          <button
+            aria-label="youtube"
+            aria-labelledby="youtube"
+            role="button"
+            className="transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"
@@ -120,7 +132,12 @@ export default function Header() {
               </defs>
             </svg>
           </button>
-          <button className="transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+          <button
+            aria-label="facebook"
+            aria-labelledby="facebook"
+            role="button"
+            className="transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"
@@ -146,7 +163,12 @@ export default function Header() {
               </defs>
             </svg>
           </button>
-          <button className="transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+          <button
+            aria-label="twitter"
+            aria-labelledby="twitter"
+            role="button"
+            className="transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"
@@ -265,7 +287,12 @@ export default function Header() {
                 Login / Register
               </Link>
             </div>
-            <button className="p-[15px] transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+            <button
+              aria-label="search"
+              aria-labelledby="search"
+              role="button"
+              className="p-[15px] transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -299,6 +326,9 @@ export default function Header() {
           {/*** Mobile ***/}
           <div className="block lg:hidden">
             <button
+              aria-label="navbutton"
+              aria-labelledby="navbutton"
+              role="button"
               className="transition-[background-color] bg-white duration-[0.6s] ease-[ease]"
               onClick={toggleNavbar}
             >
@@ -420,7 +450,12 @@ export default function Header() {
             </div>
 
             <div>
-              <button className="p-[15px] transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+              <button
+                aria-label="search"
+                aria-labelledby="search"
+                role="button"
+                className="p-[15px] transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="34"

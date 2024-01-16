@@ -1,4 +1,17 @@
+import Image from "next/image";
 import React from "react";
+
+const images = [
+  "/assets/images/about-1.png",
+  "/assets/images/about-2.png",
+  "/assets/images/about-3.png",
+  "/assets/images/about-4.png",
+  "/assets/images/about-5.png",
+  "/assets/images/about-6.png",
+  "/assets/images/about-7.png",
+  "/assets/images/about-8.png",
+  "/assets/images/about-9.png",
+];
 
 export default function AboutUs() {
   return (
@@ -12,7 +25,14 @@ export default function AboutUs() {
           </div>
           <div className="px-[30px] py-[35px]">
             <div className="flex flex-col items-center justify-center gap-5">
-              <div className="w-[90px] h-[90px] flex-shrink-0 bg-[url('/assets/images/avatar.png')] bg-no-repeat bg-cover border-[1.8] border-[#BDBDBD] rounded-[90px]"></div>
+              <div className="relative inset-0 flex-shrink-0  w-[90px] h-[90px] bg-no-repeat bg-cover border-[1.8] border-[#BDBDBD] rounded-[90px]">
+                <Image
+                  src={"/assets/images/avatar.png"}
+                  alt="item"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <div className="flex items-center gap-[5px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,15 +109,19 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-[18px]">
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-1.png')]" />
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-2.png')]" />
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-3.png')]" />
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-4.png')]" />
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-5.png')]" />
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-6.png')]" />
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-7.png')]" />
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-8.png')]" />
-          <div className="w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] flex-shrink-0 bg-[url('/assets/images/about-9.png')]" />
+          {images.map((image, i) => (
+            <div
+              className="relative inset-0 flex-shrink-0 w-[112px] h-[112px] sm:w-[143px] sm:h-[143px] bg-no-repeat bg-cover"
+              key={i}
+            >
+              <Image
+                src={image}
+                alt="item"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

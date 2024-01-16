@@ -11,7 +11,12 @@ export default function Footer() {
             <p className="text-2xl font-bold">Bandage</p>
           </Link>
           <div className="flex gap-5 items-center">
-            <button className="transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+            <button
+              aria-label="facebook"
+              aria-labelledby="facebook"
+              role="button"
+              className="transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -27,7 +32,12 @@ export default function Footer() {
                 />
               </svg>
             </button>
-            <button className="transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+            <button
+              aria-label="instagram"
+              aria-labelledby="instagram"
+              role="button"
+              className="transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -41,7 +51,12 @@ export default function Footer() {
                 />
               </svg>
             </button>
-            <button className="transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+            <button
+              aria-label="twitter"
+              aria-labelledby="twitter"
+              role="button"
+              className="transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -65,16 +80,28 @@ export default function Footer() {
           <div className="space-y-5">
             <p className="text-base font-bold">Company Info</p>
             <div className="flex flex-col gap-[10px]">
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 About Us
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Carrier
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 We are hiring
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Blog
               </Link>
             </div>
@@ -82,16 +109,28 @@ export default function Footer() {
           <div className="space-y-5">
             <p className="text-base font-bold">Legal</p>
             <div className="flex flex-col gap-[10px]">
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 About Us
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Carrier
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 We are hiring
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Blog
               </Link>
             </div>
@@ -99,16 +138,28 @@ export default function Footer() {
           <div className="space-y-5">
             <p className="text-base font-bold">Features</p>
             <div className="flex flex-col gap-[10px]">
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Business Marketing
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 User Analytic
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Live Chat
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Unlimited Support
               </Link>
             </div>
@@ -116,16 +167,28 @@ export default function Footer() {
           <div className="space-y-5">
             <p className="text-base font-bold">Resources</p>
             <div className="flex flex-col gap-[10px]">
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 IOS & Android
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Watch a Demo
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 Customers
               </Link>
-              <Link href="/" className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor">
+              <Link
+                href="/"
+                className="text-secondTextColor text-sm font-bold transition-all hover:text-textColor"
+              >
                 API
               </Link>
             </div>
@@ -155,7 +218,9 @@ export default function Footer() {
 
       <div className="px-11 py-10 sm:py-0 lg:px-20 2xl:px-[195px] bg-[#FAFAFA]">
         <div className="flex justify-center sm:justify-start items-center w-full py-[25px]">
-          <span className="text-sm text-secondTextColor font-bold text-center">Made With Love By Finland All Right Reserved </span>
+          <span className="text-sm text-secondTextColor font-bold text-center">
+            Made With Love By Finland All Right Reserved{" "}
+          </span>
         </div>
       </div>
     </footer>
