@@ -86,6 +86,9 @@ export default function Carousel({ data }: { data: Product }) {
                       />
                     </div>
                     <button
+                      aria-label="previous"
+                      aria-labelledby="previous"
+                      role="button"
                       onClick={previousImage}
                       className="absolute top-[40%] left-0 ml-10 w-10 h-14 flex justify-center items-center bg-[rgba(0,0,0,0.1)]"
                     >
@@ -122,6 +125,9 @@ export default function Carousel({ data }: { data: Product }) {
                       </svg>
                     </button>
                     <button
+                      aria-label="next"
+                      aria-labelledby="next"
+                      role="button"
                       onClick={nextImage}
                       className="absolute top-[40%] right-0 mr-10 w-10 h-14 flex justify-center items-center bg-[rgba(0,0,0,0.1)]"
                     >
@@ -161,7 +167,7 @@ export default function Carousel({ data }: { data: Product }) {
 
         <div className="grid grid-cols-4 gap-5 justify-between">
           {data.images.map((d, i) => (
-            <button onClick={() => scrollToImage(i)}  key={i}>
+            <button onClick={() => scrollToImage(i)} key={i}>
               <Image
                 src={d}
                 alt="Blog"
@@ -269,7 +275,12 @@ export default function Carousel({ data }: { data: Product }) {
                 </svg>
               </button>
             </Tooltip>
-            <button className="flex w-10 h-10 justify-center items-center border p-2.5 rounded-full border-solid border-[#E8E8E8] bg-white transition-all hover:scale-[1.1] duration-[250ms] ease-out">
+            <button
+              aria-label="hide"
+              aria-labelledby="hide"
+              role="button"
+              className="flex w-10 h-10 justify-center items-center border p-2.5 rounded-full border-solid border-[#E8E8E8] bg-white transition-all hover:scale-[1.1] duration-[250ms] ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
