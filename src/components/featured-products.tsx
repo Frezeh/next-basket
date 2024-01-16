@@ -58,7 +58,7 @@ export default function FeaturedProducts({
 
   return (
     <>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-[30px] py-6 my-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-[30px] py-6 my-6">
         {products &&
           products.map((product: Product) => (
             <Link
