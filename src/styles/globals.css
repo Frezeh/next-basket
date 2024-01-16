@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --text-color: #252b42;
+    --second-text-color: #737373;
+    --light-text-color: #fff;
+    --success-text-color: #2dc071;
+    --muted-color: #bdbdbd;
+    --primary-color: #23a6f0;
+    --danger-color: #e74040;
+    --disabled-element-color: #8ec2f2;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
+    /* all below will hide the scrollbar on all browsers.    */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+}
+
+@layer base {
+  body {
+    @apply p-0 m-0 box-border text-textColor;
+  }
+}
