@@ -54,7 +54,7 @@ export default function WishList({ iconSize }: { iconSize?: "sm" | "lg" }) {
 
       <Dialog open={open} onClose={toggleDrawer(false)}>
         <div
-          className={`flex flex-col gap-8 fixed w-[325px] max-h-[800px] rounded-lg overflow-y-scroll overflow-x-hidden px-4 py-8 top-[50%] left-[50%] 
+          className={`flex flex-col gap-8 fixed w-[325px] max-h-[90%] sm:max-h-[800px] rounded-lg overflow-y-scroll overflow-x-hidden px-4 py-8 top-[50%] left-[50%] 
           translate-x-[-50%] translate-y-[-50%] lg:left-[80%] bg-white ${montserrat.className}`}
         >
           <p className="text-base">
