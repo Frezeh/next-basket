@@ -73,6 +73,7 @@ export default function FeaturedProducts({
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
+                  className="object-contain"
                 />
               </div>
               <div className="px-[25px] pb-[35px] pt-[25px] flex flex-col items-center gap-[10px] bg-white">

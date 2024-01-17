@@ -59,14 +59,15 @@ export default function Cart({ iconSize }: { iconSize?: "sm" | "lg" }) {
             </clipPath>
           </defs>
         </svg>
-        <p className="text-xs text-primaryColor">
+        <p className="text-xs text-primaryColor w-2">
           {cartTotal(cart).totalQuantity}
         </p>
       </button>
 
       <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
         <div
-          className={`flex flex-col gap-8 fixed w-[325px] max-h-[800px] rounded-lg overflow-y-scroll overflow-x-hidden px-4 py-8 right-[10%] top-[70px] bg-white ${montserrat.className}`}
+          className={`flex flex-col gap-8 fixed w-[325px] max-h-[800px] rounded-lg overflow-y-scroll overflow-x-hidden px-4 py-8 top-[50%] left-[50%] 
+          translate-x-[-50%] translate-y-[-50%] lg:left-[80%] bg-white ${montserrat.className}`}
         >
           <p className="text-base">
             <strong className="text-2xl">Cart</strong>,{" "}
