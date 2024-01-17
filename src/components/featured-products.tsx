@@ -66,7 +66,7 @@ export default function FeaturedProducts({
               href={`/${product.id}`}
               key={product.id}
             >
-              <div className="relative inset-0 w-[239px] h-[238px] object-cover">
+              <div className="relative inset-0 w-[239px] h-[238px] object-cover bg-white">
                 <Image
                   src={product.thumbnail}
                   alt={product.title}
