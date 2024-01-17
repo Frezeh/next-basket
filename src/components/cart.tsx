@@ -5,7 +5,7 @@ import {
   removeItem,
 } from "@/redux/cart-slice";
 import { RootState } from "@/redux/store";
-import { Drawer, Rating } from "@mui/material";
+import { Rating, Dialog } from "@mui/material";
 import Image from "next/image";
 import React, { RefObject, createRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -64,7 +64,7 @@ export default function Cart({ iconSize }: { iconSize?: "sm" | "lg" }) {
         </p>
       </button>
 
-      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+      <Dialog open={open} onClose={toggleDrawer(false)}>
         <div
           className={`flex flex-col gap-8 fixed w-[325px] max-h-[800px] rounded-lg overflow-y-scroll overflow-x-hidden px-4 py-8 top-[50%] left-[50%] 
           translate-x-[-50%] translate-y-[-50%] lg:left-[80%] bg-white ${montserrat.className}`}
@@ -173,7 +173,7 @@ export default function Cart({ iconSize }: { iconSize?: "sm" | "lg" }) {
             <div className="hidden lg:block w-full h-px mx-0 my-5 bg-[#e5e5e5]" />
           </div>
         </div>
-      </Drawer>
+      </Dialog>
     </>
   );
 }
